@@ -93,7 +93,7 @@ Exemplo:
 ```env
 MYSQL_DB_HOST="localhost"
 MYSQL_DB_USER="teste123"
-MYSQL_DB_PASSWORD="abc78653
+MYSQL_DB_PASSWORD="abc78653"
 MYSQL_DB_NAME="mydbteste"
 ```
 
