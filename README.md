@@ -92,7 +92,7 @@ MYSQL_DB_PASSWORD=CHANGE-ME
 MYSQL_DB_NAME=CHANGE-ME
 ```
 
-➡️ Basta copiar esse arquivo, renomear para `.env` e substituir o "**CHANGE-ME**" pelos dados reais do seu banco.
+➡️ Basta copiar esse arquivo, renomear a cópia para somente `.env` e substituir o "**CHANGE-ME**" pelos dados reais do seu banco de dados.
 
 Exemplo:
 
