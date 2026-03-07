@@ -4,16 +4,12 @@
 Projeto em **Python** para o gerenciamento de produtos utilizando **MySQL** como banco de dados.  
 Foi implementando modularização, documentação, conexão com banco de dados, operações **CRUD** (Create, Read, Update, Delete), validação de dados, tratamento de excessões e exibição de mensagens de log.
 
----
-
 ## 💻Vídeo de demonstração do projeto
-Clique na imagem e assista um pequeno vídeo do projeto funcionando:
+Clique na imagem abaixo e assista um pequeno vídeo do funcionamento do projeto:
 
 <a href="https://vimeo.com/1171296837">
   <img src="assets/thumbnail.png" width="500">
 </a>
-
----
 
 ## 📂 Estrutura do Projeto
 - **main.py** → Ponto de entrada da aplicação com menu interativo para o usuário.
