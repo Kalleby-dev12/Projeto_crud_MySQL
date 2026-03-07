@@ -128,7 +128,7 @@ Lista de comandos (1 a 4):
 
 - Caso você já trabalhe com python ultilizando **venv**, quando você abrir o projeto e depois for criar e ativar a **venv** nele, verifique se você está realmente ativando a que está **dentro do projeto**, e não uma **externa** de outros projetos seus.
 
-- O terminal `bash` pode não reconhecer o comando `.venv\Scripts\activate` ou `source .venv/bin/activate`, se isso ocorrer tente usar o terminal do seu próprio sistema operacional.
+- O terminal `Git bash` pode não reconhecer o comando `.venv\Scripts\activate` ou `source .venv/bin/activate`, se isso ocorrer tente usar o terminal do seu próprio sistema operacional.
 
 ## 👨‍💻 Desenvolvido por Marcos Kalleby
 Aceito **feedbacks** para possíveis melhorias e assim aumentar meu aprendizado.
