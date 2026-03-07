@@ -130,5 +130,5 @@ Lista de comandos (1 a 4):
 
 - O terminal `Git bash` pode não reconhecer o comando `.venv\Scripts\activate` ou `source .venv/bin/activate`, se isso ocorrer, tente usar o terminal do seu próprio sistema operacional.
 
-## 👨‍💻 Desenvolvido por Marcos Kalleby
+## 👨🏾‍💻 Desenvolvido por Marcos Kalleby
 Aceito **feedbacks** para possíveis melhorias e assim aumentar meu aprendizado.
