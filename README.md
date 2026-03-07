@@ -7,7 +7,11 @@ Foi implementando modularização, documentação, conexão com banco de dados, 
 ---
 
 ## 💻Vídeo de demonstração do projeto
-[![Assista à demonstração](assets/thumbnail.png)](https://vimeo.com/1171296837)
+Clique na imagem e assista um pequeno vídeo do projeto funcionando:
+
+<a href="https://vimeo.com/1171296837">
+  <img src="assets/thumbnail.png" width="400">
+</a>
 ---
 
 ## 📂 Estrutura do Projeto
