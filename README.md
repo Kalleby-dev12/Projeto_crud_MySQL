@@ -124,11 +124,11 @@ Lista de comandos (1 a 4):
 **pronto**, agora é só aproveitar o programa 😉
 
 ## 📌 Observações
-- Antes de testar, **sempre** verifique se sua **venv** está ativada, para que assim o python  realmente consiga reconhecer as bibliotecas instaladas no projeto.
+- Antes de testar, **sempre** verifique se sua `venv` está ativada, para que assim o python  realmente consiga reconhecer as bibliotecas instaladas no projeto.
 
-- Caso você já trabalhe com python ultilizando **venv**, quando você abrir o projeto e depois for criar e ativar a **venv** nele, verifique se você está realmente ativando a que está **dentro do projeto**, e não uma **externa** de outros projetos seus.
+- Caso você já trabalhe com python ultilizando `venv`, quando você abrir o projeto e for criar e ativar a `venv` nele, verifique se você está realmente ativando a que está **dentro do projeto** e não alguma **externa** de outros projetos seus.
 
-- O terminal `Git bash` pode não reconhecer o comando `.venv\Scripts\activate` ou `source .venv/bin/activate`, se isso ocorrer tente usar o terminal do seu próprio sistema operacional.
+- O terminal `Git bash` pode não reconhecer o comando `.venv\Scripts\activate` ou `source .venv/bin/activate`, se isso ocorrer, tente usar o terminal do seu próprio sistema operacional.
 
 ## 👨‍💻 Desenvolvido por Marcos Kalleby
 Aceito **feedbacks** para possíveis melhorias e assim aumentar meu aprendizado.
