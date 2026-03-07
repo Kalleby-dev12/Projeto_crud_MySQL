@@ -8,7 +8,7 @@ Foi implementando modularização, documentação, conexão com banco de dados, 
 Clique na imagem abaixo e assista a um pequeno vídeo do funcionamento do projeto:
 
 <a href="https://vimeo.com/1171296837">
-  <img src="assets/thumbnail.png" width="500">
+  <img src="assets/thumbnail.png" width="500" tittle="Vídeo de demonstração">
 </a>
 
 ## 📂 Estrutura do Projeto
