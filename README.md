@@ -94,7 +94,7 @@ MYSQL_DB_NAME=CHANGE-ME
 
 ➡️ Basta copiar esse arquivo, renomear a cópia para somente `.env` e substituir o "**CHANGE-ME**" pelos dados reais do seu banco de dados.
 
-Exemplo:
+Exemplo de como deve ficar no `.env`:
 
 ```env
 MYSQL_DB_HOST="localhost"
