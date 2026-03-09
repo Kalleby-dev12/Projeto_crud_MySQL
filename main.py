@@ -1,6 +1,6 @@
 #Importando módulos
 from services import insert, select_one, select_all, update, delete
-from utils import clear
+from utils import clear, log_out
 import log_message
 import validation
 
@@ -40,6 +40,7 @@ while True:
         "2 - Selecionar dados da tabela\n" \
         "3 - Editar dados da tabela\n" \
         "4 - Deletar dados da tabela\n"
+        "5 - Sair do sistema\n"
         )
     
     try:
@@ -224,7 +225,11 @@ while True:
         print()
         continue
 
+    elif verified_input_choice == 5:
+        print(f"{log_message.notify_log_out()}")
+        log_out()
+
     else:
         #Caso o usuário escolha uma opção que não existe no menu inicial, exibe notificação e volta novamente ao mesmo
-        print(f"{log_message.notify_options_warning(1,4)}")
+        print(f"{log_message.notify_options_warning(1,5)}")
         continue

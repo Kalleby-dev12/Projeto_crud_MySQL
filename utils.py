@@ -1,5 +1,6 @@
 #Importando outros módulos
 import os
+import sys
 import subprocess
 from datetime import datetime
 
@@ -18,6 +19,7 @@ Principais funcionalidades:
     - color_to_*(): aplica cores ANSI (verde, vermelho, amarelo, ciano) ao texto.
     - _reset_color(): restaura a cor padrão do terminal.
     - clear(): limpa o terminal de forma compatível com Windows, Linux e Mac.
+    - log_out(): encerra o sistema
 
 Uso:
     Importado por módulos de log e validação para exibir mensagens
@@ -166,3 +168,15 @@ def clear() -> None:
     comand = "cls" if os.name == "nt" else "clear" 
     subprocess.run(comand, shell=True)
 
+def log_out():
+    """
+    Encerra o sistema.
+
+    Returns:
+        None: A função não retorna nada, só encerra o sistema
+
+    Example:
+        >>> log_out()
+        # Encerra o sistema
+    """
+    sys.exit(0)

@@ -167,6 +167,23 @@ def notify_deletion() -> str:
 
 
 
+def notify_log_out() -> str:
+    #Documentação da função
+    """
+    Retorna uma mensagem indicando que o sistema está encerrando.
+
+    Returns:
+        str: Mensagem formatada com timestamp e status.
+
+    Example:
+        >>> print(notify_log_out())
+        [16:05:23.123] [INFO] Encerrando o sistema...
+    """
+
+    #Código da função
+    return f"{show_moment()} {color_to_green('[INFO]')}: Encerrando o sistema...\n"
+
+
 def notify_barcode_error_number() -> str:
     #Documentação da função
     """
