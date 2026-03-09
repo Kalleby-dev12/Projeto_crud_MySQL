@@ -8,7 +8,7 @@ Foi implementando modularização, documentação, conexão com banco de dados, 
 Clique na imagem abaixo e assista a um pequeno vídeo de demonstração do projeto:
 
 <a href="https://vimeo.com/1171296837">
-  <img src="assets/thumbnail.png" width="500" title="Clique para assistir no Vimeo">
+  <img src="assets/thumbnail.png" width="480" title="Clique para assistir no Vimeo">
 </a>
 
 ## 📂 Estrutura do Projeto
@@ -92,9 +92,9 @@ MYSQL_DB_PASSWORD=CHANGE-ME
 MYSQL_DB_NAME=CHANGE-ME
 ```
 
-➡️ Basta copiar esse arquivo, renomear para `.env` e substituir o "**CHANGE-ME**" pelos dados reais do seu banco.
+➡️ Basta copiar esse arquivo, renomear a cópia para somente `.env` e substituir o "**CHANGE-ME**" pelos dados reais do seu banco de dados.
 
-Exemplo:
+Exemplo de como deve ficar no `.env`:
 
 ```env
 MYSQL_DB_HOST="localhost"
@@ -124,9 +124,11 @@ Lista de comandos (1 a 4):
 **pronto**, agora é só aproveitar o programa 😉
 
 ## 📌 Observações
-- Antes de testar, **sempre** verifique se sua **venv** está ativada, para que assim o python  realmente consiga reconhecer as bibliotecas instaladas no projeto.
+- Antes de testar, **sempre** verifique se sua `venv` está ativada, para que assim o python  realmente consiga reconhecer as bibliotecas instaladas no projeto.
 
-- Caso você já trabalhe com python ultilizando **venv**, quando você abrir o projeto e depois for criar e ativar a **venv** nele, verifique se você está realmente ativando a que está **dentro do projeto**, e não uma **externa** de outros projetos seus.
+- Caso você já trabalhe com python ultilizando `venv`, quando você abrir o projeto e for criar e ativar a `venv` nele, verifique se você está realmente ativando a que está **dentro do projeto** e não alguma **externa** de outros projetos seus.
 
-## 👨‍💻 Desenvolvido por Marcos Kalleby
+- O terminal `Git bash` pode não reconhecer o comando `.venv\Scripts\activate` ou `source .venv/bin/activate`, se isso ocorrer, tente usar o terminal do seu próprio sistema operacional.
+
+## 👨🏾‍💻 Desenvolvido por Marcos Kalleby
 Aceito **feedbacks** para possíveis melhorias e assim aumentar meu aprendizado.
