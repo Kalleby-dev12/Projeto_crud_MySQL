@@ -45,6 +45,7 @@ def notify_value_error() -> str:
 
 
 def notify_options_warning(n1: int, n2: int) -> str:
+    #Documentação da função
     """
     Retorna uma mensagem de aviso quando o usuário escolhe uma opção inválida
     em um menu interativo.
@@ -63,7 +64,26 @@ def notify_options_warning(n1: int, n2: int) -> str:
 
     #Código da função
     clear()
-    return f"{show_moment()} {color_to_yellow('[WARNING]')}: Por gentileza, escolha uma opção válida ({n1} a {n2})"
+    return f"{show_moment()} {color_to_yellow('[WARNING]')}: Por gentileza, escolha uma opção válida ({n1} a {n2})\n"
+
+
+
+def notify_options_warning_submenu() -> str:
+    #Documentação da função
+    """
+    Retorna uma mensagem de aviso quando o usuário escolhe uma opção inválida em um submenu interativo.
+
+    Returns:
+        str: Mensagem formatada com timestamp e aviso.
+
+    Example:
+        >>> print(notify_options_warning(s, n))
+        [16:05:23.123] [WARNING]: Por gentileza, escolha uma opção válida ("s" ou "n")
+    """
+
+    #Código da função
+    clear()
+    return f"{show_moment()} {color_to_yellow('[WARNING]')}: Por gentileza, escolha uma opção válida (s ou n)\n"
 
 
 
@@ -241,14 +261,14 @@ def notify_price_error() -> str:
     Example:
         >>> print(notify_float_error("abc"))
         [16:05:23.123] [ERROR]: Valor inválido
-        - Só é permitido números flutuantes nos campos de preço e estoque
+        - Só é permitido números no campo de preço
         Por gentileza, tente novamente
     """
 
     #Código da função
     clear()
     msg = (
-        "- Só é permitido números flutuantes no campo de preço\n"
+        "- Só é permitido números no campo de preço\n"
         "Por gentileza, tente novamente\n\n"
     )
     return f"{show_moment()} {color_to_red('[ERROR]')}: Valor inválido\n{msg}"
@@ -327,3 +347,20 @@ def notify_character_error() -> str:
         "Por gentileza, tente novamente\n\n"
     )
     return f"{show_moment()} {color_to_red('[ERROR]')}: Valor inválido\n{msg}"
+
+def notify_returning_menu() -> str:
+    #Documentação da função
+    """
+    Retorna uma mensagem indicando que o sistema está retornando ao menu principal.
+
+    Returns:
+        str: Mensagem formatada com timestamp e status.
+
+    Example:
+        >>> print(notify_insertion())
+        [16:05:23.123] [INFO] Retornando ao menu principal...
+    """
+
+    #Código da função
+    clear()
+    return f"{show_moment()} {color_to_green('[INFO]')}: Retornando ao menu principal...\n"

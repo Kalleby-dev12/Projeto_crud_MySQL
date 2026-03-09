@@ -1,6 +1,6 @@
 #Importações de outro módulo
 import string
-from log_message import notify_barcode_error_len, notify_field_requirement, notify_price_error, notify_stock_error,notify_barcode_error_not_numeric, notify_value_error, notify_character_error
+from log_message import notify_barcode_error_len, notify_field_requirement, notify_price_error, notify_stock_error,notify_barcode_error_not_numeric, notify_value_error, notify_character_error, notify_returning_menu, notify_options_warning_submenu
 
 #Documentação do módulo
 """
@@ -62,6 +62,48 @@ def validate_option_number(value:str):
     except ValueError:
         print(f"{notify_value_error()}")
         raise ValueError
+    
+
+def validate_option_letter(value:str):
+    #Documentação da função
+    """
+    Valida a opção informada pelo usuário em submenus.
+
+    Regras de validação:
+    - Verifica se o valor inserido foi foi sim ou não
+    - Se não for nenhum dos dois exibe `notify_options_warning_submenu` e lança `ValueError`.
+
+    Args:
+        value (str): Valor digitado pelo usuário.
+
+    Returns:
+        str: Valor válido.
+
+    Raises:
+        ValueError: Se o valor não for sim ou não.
+        Exception: Se o usuário não quiser continuar com a execução
+
+    Example:
+        >>> validate_option_letter("s")
+        "s"
+
+        >>> validate_option_letter("n")
+        [16:05:23.123] [INFO] Retornando ao menu principal...
+        Exception
+
+        >>> validate_option_letter("abc")
+        [16:05:23.123] [WARNING]: Por gentileza, escolha uma opção válida ("s" ou "n")
+        ValueError
+    """
+
+    #Código da função
+    if value.lower() == "s":
+        return value
+    if value.lower() == "n":
+        print(f"{notify_returning_menu()}")
+        raise Exception
+    print(f"{notify_options_warning_submenu()}")
+    raise ValueError
     
 
 
@@ -144,8 +186,8 @@ def validate_name(input_name: str):
         atendida.
 
     Example:
-        >>> validate_name("Maria")
-        'Maria'
+        >>> validate_name("Coca Cola 2L")
+        'Coca Cola 2L'
 
         >>> validate_name("")
         [ERROR]: Valor inválido
@@ -178,7 +220,7 @@ def validate_price(input_price : str):
 
     Regras de validação:
     - Não pode ser vazio → dispara `notify_field_requirement`.
-    - Deve ser um número flutuante válido → dispara `notify_price_error`.
+    - Deve ser um número int ou flutuante válido → dispara `notify_price_error`.
 
     Args:
         input_price (str): Valor digitado no campo de preço.
@@ -201,7 +243,7 @@ def validate_price(input_price : str):
 
         >>> validate_price("abc")
         [ERROR]: Valor inválido
-        - Só é permitido números flutuantes no campo de preço
+        - Só é permitido números no campo de preço
         Por gentileza, tente novamente
         ValueError
     """

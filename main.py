@@ -73,8 +73,19 @@ while True:
             stock_to_insert = input("Digite a quantidade em estoque: ")
             verified_stock_insert = validation.validate_stock(stock_to_insert)
 
+            print()
+
+            #Recebendo e verificando a escolha do usuário
+            option_letter_insert = input("Tem certeza que deseja inserir esse produto? (s ou n)\n"
+            "(OBS: s = sim e n = não): ")
+            verified_option_insert = validation.validate_option_letter(option_letter_insert)
+
         except ValueError:
             #Se algo der como inválido, exibe uma mensagem de erro e volta ao menu
+            continue
+
+        except Exception:
+            #Caso o usuário não queira continuar com a execução, exibe uma mensagem e volta ao menu principal
             continue
 
         #Caso tudo ocorra bem, exibe notificação e executa a inserção dos dados
@@ -163,8 +174,19 @@ while True:
             stock_to_update = input("Digite a nova quantidade em estoque: ")
             verified_stock_update = validation.validate_stock(stock_to_update)
 
+            print()
+
+            #Recebendo e verificando a escolha do usuário
+            option_letter_update = input("Tem certeza que deseja alterar os dados desse produto? (s ou n)\n"
+            "(OBS: s = sim e n = não): ")
+            verified_option_update = validation.validate_option_letter(option_letter_update)
+
         except ValueError:
             #Se algo der como inválido, exibe uma mensagem de erro e volta ao menu
+            continue
+
+        except Exception:
+            #Caso o usuário não queira continuar com a execução, exibe uma mensagem e volta ao menu principal
             continue
 
         #Caso tudo ocorra bem, exibe notificação e executa a edição dos dados
@@ -182,9 +204,17 @@ while True:
             barcode_to_delete = input("Digite o código de barras do produto que deseja deletar\n"
             "(OBS: Precisa ter 13 dígitos de números): ")
             verified_barcode_delete = validation.validate_barcode(barcode_to_delete)
+            print()
+            option_letter_delete = input("Tem certeza que deseja deletar esse produto? (s ou n)\n"
+            "(OBS: s = sim e n = não): ")
+            verified_option_delete = validation.validate_option_letter(option_letter_delete)
 
         except ValueError:
             #Caso o dado seja inválido, exibe uma mensagem de erro e volta ao menu
+            continue
+
+        except Exception:
+            #Caso o usuário não queira continuar com a execução, exibe uma mensagem e volta ao menu principal
             continue
 
         #Caso tudo ocorra bem, exibe notificação e executa a deleção dos dados
