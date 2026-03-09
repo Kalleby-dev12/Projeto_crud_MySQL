@@ -304,3 +304,26 @@ def notify_barcode_error_not_numeric() -> str:
         "Por gentileza, tente novamente\n\n"
     )
     return f"{show_moment()} {color_to_red('[ERROR]')}: Valor inválido\n{msg}"
+
+def notify_character_error() -> str:
+    #Documentação da função
+    """
+    Retorna uma mensagem de erro quando conter carcteres especiais no nome informado
+
+    Returns:
+        str: Mensagem formatada com timestamp e descrição do erro.
+
+    Example:
+        >>> print(notify_character_error())
+        [16:05:23.123] [ERROR]: Valor inválido
+        - Não é permitido caracteres especiais no campo de nome
+        Por gentileza, tente novamente
+    """
+
+    #Código da função
+    clear()
+    msg = (
+        "- Não é permitido caracteres especiais no campo de nome\n"
+        "Por gentileza, tente novamente\n\n"
+    )
+    return f"{show_moment()} {color_to_red('[ERROR]')}: Valor inválido\n{msg}"

@@ -1,5 +1,6 @@
 #Importações de outro módulo
-from log_message import notify_barcode_error_len, notify_field_requirement, notify_price_error, notify_stock_error,notify_barcode_error_not_numeric, notify_value_error
+import string
+from log_message import notify_barcode_error_len, notify_field_requirement, notify_price_error, notify_stock_error,notify_barcode_error_not_numeric, notify_value_error, notify_character_error
 
 #Documentação do módulo
 """
@@ -126,10 +127,11 @@ def validate_barcode(barcode: str):
 def validate_name(input_name: str):
     #Documentação da função
     """
-    Valida se o nome informado pelo usuário foi preenchido.
+    Valida o nome informado pelo usuário.
 
     Regras de validação:
     - Não pode ser vazio → dispara `notify_field_requirement`.
+    - Não pode conter caracteres especiais → dispara `notify_character_error`.
 
     Args:
         input_name (str): Nome digitado pelo usuário.
@@ -138,7 +140,8 @@ def validate_name(input_name: str):
         str: O nome válido informado.
 
     Raises:
-        ValueError: Se o campo estiver vazio.
+        ValueError: Se alguma regra acima não for 
+        atendida.
 
     Example:
         >>> validate_name("Maria")
@@ -149,11 +152,20 @@ def validate_name(input_name: str):
         - Esse campo é obrigatório
         Por gentileza, tente novamente
         ValueError
+        
+        >>> validate_name("produto#$%")
+        [ERROR]: Valor inválido
+        - Não é permitido caracteres especiais no campo de nome
+        Por gentileza, tente novamente
+        ValueError
     """
 
     #Código da função
     if not input_name:
         print(f"{notify_field_requirement()}")
+        raise ValueError
+    if any(char in string.punctuation for char in input_name):
+        print(f"{notify_character_error()}")
         raise ValueError
     return input_name
     
@@ -209,7 +221,7 @@ def validate_price(input_price : str):
 def validate_stock(input_stock: str):
     #Documentação da função
     """
-    Valida o valor informado para o campo de estoque.
+    Valida a quantidade em estoque informada pelo usuário.
 
     Regras de validação:
     - Não pode ser vazio → dispara `notify_field_requirement`.

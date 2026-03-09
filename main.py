@@ -56,7 +56,7 @@ while True:
         try:
             #Recebendo e verificando os campos necessários para a inserção
             barcode_to_insert = input("Digite o código de barras do produto\n"
-            "([INFO] Precisa ter 13 dígitos com números): ")
+            "(OBS: Precisa ter 13 dígitos de números): ")
             verified_barcode_insert = validation.validate_barcode(barcode_to_insert)
             print()
 
@@ -117,7 +117,7 @@ while True:
             try:
                 #Recebendo e verificando o campo necessário para a seleção
                 barcode_to_select = input("Digite o código de barras do produto que deseja selecionar\n"
-                "([INFO] Precisa ter 13 dígitos com números): ")
+                "(OBS: Precisa ter 13 dígitos de números): ")
                 verified_barcode_select = validation.validate_barcode(barcode_to_select)
             except ValueError:
                 #Caso o dado seja inválido, exibe uma mensagem de erro e volta ao menu
@@ -143,11 +143,12 @@ while True:
         try:
             #Recebendo e verificando os campos necessários para a edição
             current_barcode = input("Digite o código de barras do produto que deseja alterar\n"
-            "([INFO] Precisa ter 13 dígitos com números): ")
+            "(OBS: Precisa ter 13 dígitos de números): ")
             verified_current_barcode = validation.validate_barcode(current_barcode)
             print()
 
-            barcode_to_update = input("Digite o novo código de barras do produto: ")
+            barcode_to_update = input("Digite o novo código de barras do produto\n"
+            "(OBS: Precisa ter 13 dígitos de números): ")
             verified_barcode_update = validation.validate_barcode(barcode_to_update)
             print()
 
@@ -179,7 +180,7 @@ while True:
         try:
             #Recebendo e verificando o campo necessário para a deleção
             barcode_to_delete = input("Digite o código de barras do produto que deseja deletar\n"
-            "([INFO] Precisa ter 13 dígitos com números): ")
+            "(OBS: Precisa ter 13 dígitos de números): ")
             verified_barcode_delete = validation.validate_barcode(barcode_to_delete)
 
         except ValueError:

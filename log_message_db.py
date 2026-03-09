@@ -171,18 +171,18 @@ def notify_command_in_execution() -> str:
 def notify_executed_command() -> str:
     #Documentação da função
     """
-    Retorna uma mensagem indicando que um comando SQL foi executado com sucesso.
+    Retorna uma mensagem indicando que um comando SQL foi executado.
 
     Returns:
         str: Mensagem formatada com timestamp e status.
 
     Example:
         >>> print(notify_executed_command())
-        [16:05:23.123] [DB.INFO]: Comando executado com sucesso!
+        [16:05:23.123] [DB.INFO]: Comando executado!
     """
 
     #Código da função
-    return f"{show_moment()} {color_to_green('[DB.INFO]')}: Comando executado com sucesso!"
+    return f"{show_moment()} {color_to_green('[DB.INFO]')}: Comando executado!"
 
 
 
